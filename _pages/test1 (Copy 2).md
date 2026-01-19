@@ -33,7 +33,8 @@ body {
   position: relative;
 
   margin-top: 1rem;
-  gap: 30px;
+ row-gap: 30px !important;   /* vertical entre filas */
+column-gap: 10px; 
 
   /* ===== DESKTOP (layout principal) ===== */
   grid-template-columns: repeat(6, 1fr);
@@ -73,8 +74,8 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 
 .arch-card {
   position: relative;
-  width: 175px;
-  height: 175px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   background: var(--cyan);
   
@@ -88,18 +89,13 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   flex-direction: column;
 }
 
-.arch-ins {
-  width: 300px;
-  height: auto;
-  min-height: 320px;
 
-  background: linear-gradient(180deg, #6c2a68 0%, #4b1f45 100%);
+
+.arch-logos {
+  width: 200px;
+  height: 150px;
+
   border-radius: 24px;
-  border: 3px solid var(--box-stroke);
-
-  box-shadow:
-    0 10px 24px rgba(0,0,0,0.45),
-    inset 0 1px 0 rgba(255,255,255,0.15);
 
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -109,31 +105,8 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   cursor: default;
 }
 
-.arch-ins:hover {
-  transform: none;
-  filter: none;
-}
 
-.arch-ins .title {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffe8a3;
-}
-
-.arch-ins p {
-  font-size: 14px;
-  line-height: 1.55;
-  color: #f3eee2;
-  text-align: center;
-  opacity: 0.9;
-}
-
-
-
-
+.pos-cc                 { grid-row: 1; grid-column: 6; }
 .pos-von-neumann        { grid-row: 1; grid-column: 1; }
 .pos-caches             { grid-row: 1; grid-column: 2; }
 .pos-machine-arch       { grid-row: 2; grid-column: 2; }
@@ -145,6 +118,8 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 .pos-strong-scaling     { grid-row: 2; grid-column: 5; }
 .pos-weak-scaling       { grid-row: 2; grid-column: 6; }
 .pos-instructions      { grid-row: 3; grid-column: 1; }
+.pos-link              { grid-row: 4; grid-column: 1; }
+.pos-logos             { grid-row: 3; grid-column: 6; }
 
 
 
@@ -160,8 +135,8 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   font-size: 20px;
   text-align: center;
   line-height: 1.2;
-  margin-left:0.5rem;
-  margin-right:0.5rem;
+  margin-left:0.1rem;
+  margin-right:0.1rem;
 }
 
 
@@ -175,16 +150,16 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 
 .arch-card.active .title {
   font-size: 15px;
-  margin-bottom:0.5rem !important;
-    margin-top:0.5rem !important;
+  margin-bottom:0.1rem !important;
+    margin-top:0.1rem !important;
 }
 
 .arch-card.active .btn {
   background: var(--bg);  /* fondo blanco */
   color: #ffffff ;     /* texto oscuro (para contraste con fondo blanco) */
   font-weight: 600;
-  font-size: 14px;
-  width: 150px;
+  font-size: 12px;
+  width: 130px;
   text-align: center;
   border-radius: 22px;
 }
@@ -207,7 +182,7 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   justify-content: center;  
   align-items: center;      
   height: 100%;
-  gap: 5px;                
+  gap: 1px;                
 }
 
 .arch-card.active .actions {
@@ -215,7 +190,7 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   flex-direction: column;
   justify-content: center; 
   align-items: center;
-  gap: 10px;               
+  gap: 2px;               
 }
 
 
@@ -372,12 +347,10 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 }
 
 .arch-ins {
-  width: 320px;
+  width: 300px;
   min-height: 100px;
 
-  background: #6c2a68;
-  border-radius: 24px;
-  border: 3px solid var(--box-stroke);
+  background: #042f39; 
 
 
   padding: 24px;
@@ -389,6 +362,26 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   transform: translateY(-3px);
   filter: brightness(1.05);
 }
+
+
+
+.arch-ins .title {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffe8a3;
+}
+
+.arch-ins p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #f3eee2;
+  text-align: center;
+  opacity: 0.9;
+}
+
 
 .legend {
   display: grid;
@@ -410,6 +403,68 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   margin: 0; /* 🔴 elimina desplazamientos */
 }
 
+.legend-item h1{
+  font-size: 14px !important;
+  margin-left:30px !important;
+  margin-top: 15px!important;
+}
+
+.legend h1{
+font-size:15px;
+margin-left:10px;
+ font-weight: 500;
+  color: #ffffff;
+}
+
+
+#link.arch-ins {
+  width: 300px;
+  min-height: auto;
+  padding: 12px 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--pink);
+  border-radius: 16px;
+  border: 2px solid var(--box-stroke);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+
+
+
+#link.arch-ins a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #042f39;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+
+.logo-small {
+  max-width: 100px;
+  max-height:100px;
+  width: auto; height: auto; object-fit: contain; display: block;
+}
+
+.logo-medium {
+  max-width: 200px;
+  max-height:200px;
+  width: auto; height: auto; object-fit: contain; display: block;
+}
+
+.logo-large {
+  max-width: 200px;
+  max-height:200px;
+  width: auto; height: auto; object-fit: contain; display: block;
+}
 
 
 .color-box.before {
@@ -429,9 +484,9 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 }
 
 .color-box {
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
   border: 2px solid var(--box-stroke);
   margin: 0; /* 🔑 clave */
 }
@@ -456,7 +511,7 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 
   background: linear-gradient(180deg, #6c2a68 0%, #4b1f45 100%);
   border-radius: 26px;
-  border: 3px solid var(--box-stroke);
+  border: 1px solid var(--box-stroke);
 
   box-shadow:
     0 12px 28px rgba(0,0,0,0.45),
@@ -469,13 +524,14 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 }
 
 .page-title-box h1 {
-  font-size: 36px;
+  font-size: 25px;
   font-weight: 900;
   letter-spacing: 1px;
   text-transform: uppercase;
 
   color: #ffffff;
-  margin-top: 1rem;
+  margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
 }
 
 .page-title-box p {
@@ -485,6 +541,11 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   opacity: 0.9;
   margin: 0;
 }
+
+
+
+
+
 
 
 .canvas-scale {
@@ -501,6 +562,11 @@ body {
 }
 
 
+.initial-content,
+.page-content,
+#main {
+  overflow: visible !important;
+}
 
 
 
@@ -517,7 +583,6 @@ body {
 
 <div class="page-title-box">
   <h1>High-Performance Computing Concepts</h1>
-  <p>Visual overview of lectures and their dependencies</p>
 </div>
 
 
@@ -542,20 +607,62 @@ body {
   <div class="legend">
     <div class="legend-item">
       <span class="color-box before"></span>
-      Previous lecture (suggested)
+     <h1> Previous suggested lecture</h1>
     </div>
     <div class="legend-item">
       <span class="color-box connected"></span>
-      Required lecture
+      <h1>Previous required lecture</h1>
     </div>
     <div class="legend-item">
       <span class="color-box after"></span>
-      Next lecture
+     <h1> Next suggested lecture</h1>
     </div>
   </div>
 
   
 </div>
+
+
+<div id="link" class="arch-ins pos-link">
+  <a href="https://training-academy.dirac.ac.uk/course/section.php?id=66">
+    Access the full course on the DiRAC Training Academy
+  </a>
+</div>
+
+
+
+
+
+<div
+  id="logos"
+  class="arch-logos pos-logos"
+>
+  
+
+  <div class="legend">
+<div class="legend">
+  <img src="/assets/images/durham.png" class="logo-large" alt="Durham">
+  <img src="/assets/images/ukri.png" class="logo-medium" alt="UKRI">
+  <img src="/assets/images/dirac.png" class="logo-small" alt="DiRAC">
+</div>
+
+  </div>
+
+</div>
+
+
+<div
+  id="logos"
+  class="arch-logos pos-cc"
+>
+  <div class="legend">
+  
+  <img src="/assets/images/cc.png" alt="Logo 1">
+  </div>
+
+</div>
+
+
 
 
 
@@ -838,6 +945,8 @@ event.stopPropagation(); return false;">
   </div>
 </div>
 
+
+
 <!-- Modal para video -->
 <div id="video-modal" class="video-modal" onclick="closeVideo()">
   <div class="video-modal-content" onclick="event.stopPropagation();">
@@ -929,7 +1038,7 @@ GPU: {
   requiredPrev: [
   {id: "machine-architectures", portFrom: "BL", portTo: "B"}],
   next: [
-    {id: "strong-scaling", portFrom: "R", portTo: "BR"},
+    {id: "strong-scaling", portFrom: "R", portTo: "B"},
     {id: "vectorisation", portFrom: "T", portTo: "B"}
   ]
 },
@@ -940,7 +1049,7 @@ GPU: {
   requiredPrev: [
   {id: "machine-architectures", portFrom: "L", portTo: "B"}],
   next: [
-    {id: "strong-scaling", portFrom: "R", portTo: "B"},
+    {id: "strong-scaling", portFrom: "R", portTo: "BL"},
     {id: "shared-memory", portFrom: "B", portTo: "L"}
   ]
 },
