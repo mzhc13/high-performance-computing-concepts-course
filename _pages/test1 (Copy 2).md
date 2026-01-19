@@ -32,7 +32,7 @@ body {
   display: grid;
   position: relative;
 
-  margin-top: 100px;
+  margin-top: 1rem;
   gap: 30px;
 
   /* ===== DESKTOP (layout principal) ===== */
@@ -63,6 +63,14 @@ body {
 }
 
 
+.card-content: hoover{
+background: #064756;      /* fondo ligeramente más claro / verde azulado */
+  transform: translateY(-2px);  /* sube un poquito */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* sombra más marcada */
+  filter: brightness(1.1);   /* un pequeño brillo */
+
+}
+
 .arch-card {
   position: relative;
   width: 175px;
@@ -80,6 +88,51 @@ body {
   flex-direction: column;
 }
 
+.arch-ins {
+  width: 300px;
+  height: auto;
+  min-height: 320px;
+
+  background: linear-gradient(180deg, #6c2a68 0%, #4b1f45 100%);
+  border-radius: 24px;
+  border: 3px solid var(--box-stroke);
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 18px;
+
+  padding: 24px 22px;
+  cursor: default;
+}
+
+.arch-ins:hover {
+  transform: none;
+  filter: none;
+}
+
+.arch-ins .title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffe8a3;
+}
+
+.arch-ins p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #f3eee2;
+  text-align: center;
+  opacity: 0.9;
+}
+
+
+
 
 .pos-von-neumann        { grid-row: 1; grid-column: 1; }
 .pos-caches             { grid-row: 1; grid-column: 2; }
@@ -91,6 +144,7 @@ body {
 .pos-roofline           { grid-row: 1; grid-column: 5; }
 .pos-strong-scaling     { grid-row: 2; grid-column: 5; }
 .pos-weak-scaling       { grid-row: 2; grid-column: 6; }
+.pos-instructions      { grid-row: 3; grid-column: 1; }
 
 
 
@@ -317,8 +371,120 @@ body {
   border-radius: 12px;
 }
 
+.arch-ins {
+  width: 320px;
+  min-height: 100px;
+
+  background: #6c2a68;
+  border-radius: 24px;
+  border: 3px solid var(--box-stroke);
 
 
+  padding: 24px;
+  cursor: default;
+}
+
+
+.arch-ins:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.legend-item {
+  display: grid;
+  grid-template-columns: 30px 1fr; /* caja + texto */
+  align-items: center;
+  column-gap: 12px;
+
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+
+  margin: 0; /* 🔴 elimina desplazamientos */
+}
+
+
+
+.color-box.before {
+  background: #DACDA2;
+}
+
+.color-box.connected {
+  background: #F3B495;
+}
+
+.color-box.after {
+  background: #00AEEF;
+}
+
+.arch-ins .card-content p {
+  color: #FFF8DC;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 2px solid var(--box-stroke);
+  margin: 0; /* 🔑 clave */
+}
+
+
+/* colores según tus clases */
+.color-box.before {
+  background: #DACDA2; /* amarillo */
+}
+
+.color-box.connected {
+  background: #F3B495; /* naranja */
+}
+
+.color-box.after {
+  background: #00AEEF; /* azul */
+}
+
+.page-title-box {
+  width: 100%;
+  max-width: 1100px;
+
+  background: linear-gradient(180deg, #6c2a68 0%, #4b1f45 100%);
+  border-radius: 26px;
+  border: 3px solid var(--box-stroke);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+
+  padding: 28px 36px;
+  margin: 0 auto 32px auto;
+
+  text-align: center;
+}
+
+.page-title-box h1 {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.page-title-box p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #f3eee2;
+  opacity: 0.9;
+  margin: 0;
+}
 
 
 .canvas-scale {
@@ -347,8 +513,12 @@ body {
 
 
 
+<br>
 
-
+<div class="page-title-box">
+  <h1>High-Performance Computing Concepts</h1>
+  <p>Visual overview of lectures and their dependencies</p>
+</div>
 
 
 
@@ -358,6 +528,36 @@ body {
     <svg id="arrows-layer"></svg>
 
     <!-- cards aquí -->
+
+
+
+
+
+<div
+  id="instructions"
+  class="arch-ins pos-instructions"
+>
+  
+
+  <div class="legend">
+    <div class="legend-item">
+      <span class="color-box before"></span>
+      Previous lecture (suggested)
+    </div>
+    <div class="legend-item">
+      <span class="color-box connected"></span>
+      Required lecture
+    </div>
+    <div class="legend-item">
+      <span class="color-box after"></span>
+      Next lecture
+    </div>
+  </div>
+
+  
+</div>
+
+
 
 
 
@@ -656,7 +856,7 @@ event.stopPropagation(); return false;">
 
 </div>
 
-</div>
+
 
 
 <script>
@@ -1133,9 +1333,3 @@ document.querySelector(".graph-grid").addEventListener("click", function(e){
   }
 });
 </script>
-
-
-
-
-
-
