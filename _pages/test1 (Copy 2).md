@@ -641,9 +641,9 @@ body {
 
   <div class="legend">
 <div class="legend">
-  <img src="/assets/images/durham.png" class="logo-large" alt="Durham">
-  <img src="/assets/images/ukri.png" class="logo-medium" alt="UKRI">
-  <img src="/assets/images/dirac.png" class="logo-small" alt="DiRAC">
+  <img src="https://github.com/mzhc13/high-performance-computing-concepts-course/blob/main/assets/images/durham.png?raw=true" class="logo-large" alt="Durham">
+  <img src="https://github.com/mzhc13/high-performance-computing-concepts-course/blob/main/assets/images/ukri.png?raw=true" class="logo-medium" alt="UKRI">
+  <img src="https://github.com/mzhc13/high-performance-computing-concepts-course/blob/main/assets/images/dirac.png?raw=true" class="logo-small" alt="DiRAC">
 </div>
 
   </div>
@@ -657,7 +657,7 @@ body {
 >
   <div class="legend">
   
-  <img src="/assets/images/cc.png" alt="Logo 1">
+  <img src="https://github.com/mzhc13/high-performance-computing-concepts-course/blob/main/assets/images/cc.png?raw=true" alt="Logo 1">
   </div>
 
 </div>
