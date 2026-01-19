@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /test4/
+permalink: /tes/
 title: ""          # quita el título
 search: false      # desactiva la barra de búsqueda
 ---

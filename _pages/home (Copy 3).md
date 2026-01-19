@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /test4/
+permalink: /test2/
 title: ""          # quita el título
 search: false      # desactiva la barra de búsqueda
 ---
@@ -27,7 +27,10 @@ html, body {
 
 body {
   background: var(--bg);
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   color: var(--light);
 }
 
@@ -79,10 +82,9 @@ font-weight: 700;
 
 
 .arch-card {
-  position: relative;
-  max-width: 300px;
+  position: absolute;
+  width: 300px;
   height: 250px;
-  margin: 0 auto;
   background: var(--cyan);
   
   border-radius: 22px;
@@ -102,20 +104,6 @@ font-weight: 700;
 
   z-index: 1;
 }
-
-
-.pos-von-neumann        { grid-row: 2; grid-column: 1; }
-.pos-caches             { grid-row: 1; grid-column: 2; }
-.pos-machine-arch       { grid-row: 3; grid-column: 2; }
-.pos-gpu                { grid-row: 4; grid-column: 3; }
-.pos-mpi                { grid-row: 5; grid-column: 3; }
-.pos-shared-memory      { grid-row: 5; grid-column: 4; }
-.pos-vectorisation      { grid-row: 1; grid-column: 4; }
-.pos-roofline           { grid-row: 1; grid-column: 5; }
-.pos-strong-scaling     { grid-row: 3; grid-column: 5; }
-.pos-weak-scaling       { grid-row: 3; grid-column: 6; }
-
-
 
 .arch-card:hover {
   transform: translateY(-2px);
@@ -144,20 +132,6 @@ font-weight: 700;
   left: 0;
   pointer-events: none;
   z-index: 0;
-}
-
-.graph-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 40px;
-
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 80px 40px;
- min-height: 1400px; /* o más */
-  align-content: start;
-  position: relative; /* para el SVG */
 }
 
 
@@ -372,7 +346,8 @@ line.dimmed-line {
 
 .canvas {
   position: relative;
-
+  width: 1920px; /* tamaño base */
+  height: 1200px;
   transform-origin: top left; /* importante para escalar desde la esquina */
 }
 
@@ -382,11 +357,10 @@ line.dimmed-line {
   </style>
 
 
+<section class="section-muted">
+  <div class="section" id="canvas">
 
 
-<div class="section" id="canvas">
-
-<div class="graph-grid">
     
 <svg id="connections" class="connections" width="1920" height="1200"
      viewBox="0 0 1920 1200" preserveAspectRatio="xMinYMin slice">
@@ -420,10 +394,15 @@ line.dimmed-line {
 
 
 
+<div class="title-main">
+<t>High-Performance Computing Concepts</t>
+</div>
+
 
 <div
   id="von-neumann"
-  class="arch-card pos-von-neumann"
+  class="arch-card"
+  style="left: -225px; top: 300px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -456,7 +435,8 @@ event.stopPropagation(); return false;">
   
 <div
   id="caches"
-  class="arch-card pos-caches"
+  class="arch-card"
+  style="left: 125px; top: 150px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -480,7 +460,8 @@ event.stopPropagation(); return false;">
 
 <div
   id="machine-architectures"
-  class="arch-card pos-machine-arch"
+  class="arch-card"
+  style="left: 125px; top: 450px;"
  onclick="nodeClick(this, event);"
 
 >
@@ -507,7 +488,8 @@ event.stopPropagation(); return false;">
 
  <div
   id="GPU"
-  class="arch-card pos-gpu"
+  class="arch-card"
+  style="left: 550px; top: 450px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -536,7 +518,8 @@ event.stopPropagation(); return false;">
 
  <div
   id="MPI"
-  class="arch-card pos-mpi"
+  class="arch-card"
+  style="left: 550px; top: 750px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -563,7 +546,8 @@ event.stopPropagation(); return false;">
 
  <div
   id="vectorisation"
-  class="arch-card pos-vectorisation"
+  class="arch-card"
+  style="left: 900px; top: 150px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -590,7 +574,8 @@ event.stopPropagation(); return false;">
 
  <div
   id="shared-memory"
-  class="arch-card pos-shared-memory"
+  class="arch-card"
+  style="left: 900px; top: 750px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -621,7 +606,8 @@ event.stopPropagation(); return false;">
 
  <div
   id="roofline"
-  class="arch-card pos-roofline"
+  class="arch-card"
+  style="left: 1250px; top: 150px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -650,7 +636,8 @@ event.stopPropagation(); return false;">
 
  <div
   id="strong-scaling"
-  class="arch-card pos-strong-scaling"
+  class="arch-card"
+  style="left: 1150px; top: 450px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -677,7 +664,8 @@ event.stopPropagation(); return false;">
 
  <div
   id="weak-scaling"
-  class="arch-card pos-weak-scaling"
+  class="arch-card"
+  style="left: 1500px; top: 450px;"
   onclick="nodeClick(this, event);"
 
 >
@@ -701,7 +689,6 @@ event.stopPropagation(); return false;">
 
 </div>
 
-</div>
   </section>
   
   

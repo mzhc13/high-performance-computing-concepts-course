@@ -1,9 +1,11 @@
 ---
 layout: splash
-permalink: /test4/
+permalink: /test1/
 title: ""          # quita el título
 search: false      # desactiva la barra de búsqueda
 ---
+
+
 
 <style>
 
@@ -19,101 +21,42 @@ search: false      # desactiva la barra de búsqueda
 }
 
 
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: Rubik, Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-}
 
 body {
   background: var(--bg);
-  margin: 0;
   color: var(--light);
 }
 
 
 
-
-  .title-main {
-  position: absolute;
-  width: 1200px;
-  height: 125px;
-  background: #6c2a68;
-  border-radius: 22px;
-  border: 4px solid var(--box-stroke);
-  box-sizing: border-box;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.title-main t{
-color: #ffffff;
-font-size:60px;
-text-align: center;
-margin-bottom: 1rem !important;
-margin-top: 1rem !important;
-font-weight: 700;
-  }
-  
-  
-
-.section-muted {
-  background: var(--brand-purple-light);
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
- padding: 2.5rem 0; 
-  display: flow-root;
-  }
-  
-  .section-muted-blue {
-  background: var(--brand-blue-light);
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
- padding: 2.5rem 0; 
-  display: flow-root;
-  }
-
-
-
-
 .arch-card {
   position: relative;
-  max-width: 300px;
-  height: 250px;
+  width: 250px;
+  height: 200px;
   margin: 0 auto;
   background: var(--cyan);
   
   border-radius: 22px;
   border: 4px solid var(--box-stroke);
   
-  box-sizing: border-box;
-  padding: 20px;
+  
   cursor: pointer;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.45);
-  transition: opacity 0.2s ease, background 0.2s ease, transform 0.1s ease;
-
-  z-index: 1;
 }
 
 
-.pos-von-neumann        { grid-row: 2; grid-column: 1; }
+.pos-von-neumann        { grid-row: 1; grid-column: 1; }
 .pos-caches             { grid-row: 1; grid-column: 2; }
-.pos-machine-arch       { grid-row: 3; grid-column: 2; }
-.pos-gpu                { grid-row: 4; grid-column: 3; }
-.pos-mpi                { grid-row: 5; grid-column: 3; }
-.pos-shared-memory      { grid-row: 5; grid-column: 4; }
+.pos-machine-arch       { grid-row: 2; grid-column: 2; }
+.pos-gpu                { grid-row: 2; grid-column: 3; }
+.pos-mpi                { grid-row: 3; grid-column: 3; }
+.pos-shared-memory      { grid-row: 3; grid-column: 4; }
 .pos-vectorisation      { grid-row: 1; grid-column: 4; }
 .pos-roofline           { grid-row: 1; grid-column: 5; }
-.pos-strong-scaling     { grid-row: 3; grid-column: 5; }
-.pos-weak-scaling       { grid-row: 3; grid-column: 6; }
+.pos-strong-scaling     { grid-row: 2; grid-column: 5; }
+.pos-weak-scaling       { grid-row: 2; grid-column: 6; }
 
 
 
@@ -128,12 +71,10 @@ font-weight: 700;
   font-size: 30px;
   text-align: center;
   line-height: 1.2;
+  margin-left:1rem;
+  margin-right:1rem;
 }
 
-
-.section {
-  position: relative;
-}
 
 
 
@@ -148,15 +89,12 @@ font-weight: 700;
 
 .graph-grid {
   display: grid;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 40px;
-
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 80px 40px;
- min-height: 1400px; /* o más */
-  align-content: start;
+  gap: 60px;
   position: relative; /* para el SVG */
 }
 
@@ -212,7 +150,7 @@ font-weight: 700;
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 16px;
+  gap: 1px;
 }
 
 
@@ -280,28 +218,6 @@ font-weight: 700;
 }
 
 
-
-
-line {
-  stroke: #ffffff;
-  opacity: 0.25;
-}
-
-line.after-line {
-  stroke: #00AEEF; 
-  opacity: 1;
-}
-
-
-line.before-line {
-  stroke: #DACDA2; 
-  opacity: 1;
-}
-
-
-line.dimmed-line {
-  opacity: 0.1;
-}
 
 
 .video-modal {
@@ -392,14 +308,14 @@ line.dimmed-line {
      viewBox="0 0 1920 1200" preserveAspectRatio="xMinYMin slice">
  <defs>
   <!-- Flecha normal -->
-  <marker id="arrow-end"
-          viewBox="0 0 10 10"
-          refX="9"
-          refY="5"
-          markerWidth="6"
-          markerHeight="6"
-          orient="auto"
-          markerUnits="strokeWidth">
+<marker id="arrow-end"
+  viewBox="0 0 10 10"
+  refX="10"
+  refY="5"
+  markerWidth="10"
+  markerHeight="10"
+  orient="auto"
+          markerUnits="userSpaceOnUse">
     <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
   </marker>
 
@@ -411,7 +327,7 @@ line.dimmed-line {
           markerWidth="6"
           markerHeight="6"
           orient="auto"
-          markerUnits="strokeWidth">
+          markerUnits="userSpaceOnUse">
     <path d="M 10 0 L 0 5 L 10 10 z" fill="context-stroke"/>
   </marker>
 </defs>
@@ -706,54 +622,7 @@ event.stopPropagation(); return false;">
   
   
   
-<div class="instructions" style="left: 75px; top: 575px;">
-  <div style="display: flex; flex-direction: column; gap: 20px; font-family: Rubik, Montserrat, sans-serif;">
-    
-    <!-- Required previous lecture -->
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <div style="width: 36px; height: 36px; background: #DACDA2; border-radius: 6px;"></div>
-      <span>Required previous lecture</span>
-      <svg width="60" height="20">
-        <line x1="55" y1="10" x2="0" y2="10" stroke="#DACDA2" stroke-width="4" marker-end="url(#arrow-start)"/>
-      </svg>
-    </div>
-    
-    <!-- Suggested previous lecture -->
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <div style="width: 36px; height: 36px; background: #DACDA2; border-radius: 6px;"></div>
-      <span>Suggested previous lecture</span>
-      <svg width="60" height="20">
-        <line x1="55" y1="10" x2="0" y2="10" stroke="#DACDA2" stroke-width="4" stroke-dasharray="8,4" marker-end="url(#arrow-start)"/>
-      </svg>
-    </div>
-
-    <!-- Suggested follow-up lecture -->
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <div style="width: 36px; height: 36px; background: #00AEEF; border-radius: 6px;"></div>
-      <span>Suggested follow-up lecture</span>
-      <svg width="60" height="20">
-        <line x1="0" y1="10" x2="55" y2="10" stroke="#00AEEF" stroke-width="4" marker-end="url(#arrow-end)"/>
-      </svg>
-    </div>
-    
-  </div>
-</div>
-
-<!-- Definimos los marcadores de flecha -->
-<svg width="0" height="0">
-  <defs>
-    <marker id="arrow-end" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00AEEF"/>
-    </marker>
-    <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 10 0 L 0 5 L 10 10 z" fill="#DACDA2"/>
-    </marker>
-  </defs>
-</svg>
-
-
-
-
+  
 
 
 
@@ -898,6 +767,8 @@ function connect(from, to, dashed = false) {
 
   // Volvemos a poner el <defs>
   if (defs) svg.appendChild(defs);
+  
+  lines.length = 0;
 
     connect("von-neumann", "caches");
     connect("von-neumann", "machine-architectures");
@@ -927,19 +798,7 @@ function connect(from, to, dashed = false) {
 
 
 
-function resetDiagram() {
-  const cards = document.querySelectorAll('.arch-card');
 
-  cards.forEach(c =>
-    c.classList.remove('active', 'before', 'after', 'connected', 'unrelated')
-  );
-
-  lines.forEach(l => {
-    l.classList.remove('before-line', 'after-line', 'dimmed-line');
-    l.setAttribute('marker-start', '');
-    l.setAttribute('marker-end', 'url(#arrow-end)');
-  });
-}
 
 
 function nodeClick(node, event) {
@@ -1005,28 +864,6 @@ function nodeClick(node, event) {
 }
 
 
-function clipLineToCard(from, to, card) {
-  const w = 300 / 2;
-  const h = 250 / 2;
-
-  const dx = to.x - from.x;
-  const dy = to.y - from.y;
-
-  const absDx = Math.abs(dx);
-  const absDy = Math.abs(dy);
-
-  let scale;
-  if (absDx / w > absDy / h) {
-    scale = w / absDx;
-  } else {
-    scale = h / absDy;
-  }
-
-  return {
-    x: to.x - dx * scale,
-    y: to.y - dy * scale
-  };
-}
 
 
 
