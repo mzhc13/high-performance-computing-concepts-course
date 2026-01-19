@@ -33,10 +33,10 @@ body {
   position: relative;
 
   margin-top: 1rem;
- row-gap: 30px !important;   /* vertical entre filas */
+ row-gap: 30px !important;   
 column-gap: 10px; 
 
-  /* ===== DESKTOP (layout principal) ===== */
+
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, minmax(180px, auto));
 
@@ -65,10 +65,10 @@ column-gap: 10px;
 
 
 .card-content: hoover{
-background: #064756;      /* fondo ligeramente más claro / verde azulado */
-  transform: translateY(-2px);  /* sube un poquito */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* sombra más marcada */
-  filter: brightness(1.1);   /* un pequeño brillo */
+background: #064756;      
+  transform: translateY(-2px);  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
+  filter: brightness(1.1);  
 
 }
 
@@ -155,8 +155,8 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 }
 
 .arch-card.active .btn {
-  background: var(--bg);  /* fondo blanco */
-  color: #ffffff ;     /* texto oscuro (para contraste con fondo blanco) */
+  background: var(--bg);  
+  color: #ffffff ;    
   font-weight: 600;
   font-size: 12px;
   width: 130px;
@@ -165,10 +165,10 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 }
 
 .arch-card.active .btn:hover {
-  background: #064756;      /* fondo ligeramente más claro / verde azulado */
-  transform: translateY(-2px);  /* sube un poquito */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* sombra más marcada */
-  filter: brightness(1.1);   /* un pequeño brillo */
+  background: #064756;     
+  transform: translateY(-2px);  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
+  filter: brightness(1.1);  
 }
 
 
@@ -228,15 +228,15 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 
 
 .arch-card.before {
-  background: #DACDA2; /* amarillo */
+  background: #DACDA2;
 }
 
 .arch-card.connected {
-  background: #F3B495; /* ← esto cámbialo a naranja */
+  background: #F3B495; 
 }
 
 .arch-card.after {
-  background: #00AEEF; /* azul */
+  background: #00AEEF;
 }
 
 
@@ -285,16 +285,16 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 }
 
 .arrow-before {
-  stroke: #DACDA2;                 /* amarillo */
-  stroke-dasharray: 6 6;           /* DISCONTINUA */
+  stroke: #DACDA2;                
+  stroke-dasharray: 6 6;         
 }
 
 .arrow-required {
-  stroke: #F3B495;                 /* naranja */
+  stroke: #F3B495;                
 }
 
 .arrow-after {
-  stroke: #00AEEF;                 /* azul */
+  stroke: #00AEEF;                
 }
 
 
@@ -335,7 +335,7 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 
 .video-wrapper {
   position: relative;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%;
 }
 
 .video-wrapper iframe {
@@ -392,7 +392,7 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
 
 .legend-item {
   display: grid;
-  grid-template-columns: 30px 1fr; /* caja + texto */
+  grid-template-columns: 30px 1fr;
   align-items: center;
   column-gap: 12px;
 
@@ -400,7 +400,7 @@ background: #064756;      /* fondo ligeramente más claro / verde azulado */
   font-weight: 500;
   color: #ffffff;
 
-  margin: 0; /* 🔴 elimina desplazamientos */
+  margin: 0; 
 }
 
 .legend-item h1{
@@ -488,21 +488,21 @@ margin-left:10px;
   height: 50px;
   border-radius: 8px;
   border: 2px solid var(--box-stroke);
-  margin: 0; /* 🔑 clave */
+  margin: 0;
 }
 
 
 /* colores según tus clases */
 .color-box.before {
-  background: #DACDA2; /* amarillo */
+  background: #DACDA2; 
 }
 
 .color-box.connected {
-  background: #F3B495; /* naranja */
+  background: #F3B495; 
 }
 
 .color-box.after {
-  background: #00AEEF; /* azul */
+  background: #00AEEF; 
 }
 
 .page-title-box {
@@ -969,9 +969,7 @@ event.stopPropagation(); return false;">
 
 
 <script>
-/* =========================
-   RELACIONES ENTRE NODOS
-========================= */
+
 
 const relations = {
 "von-neumann": {
@@ -1086,9 +1084,7 @@ GPU: {
 };
 
 
-/* =========================
-   CLICK EN UNA CARD
-========================= */
+
 
 
 function intersectRect(cx, cy, hw, hh, dx, dy) {
@@ -1134,31 +1130,30 @@ function applyArrowStyle(line, type) {
 
 
 <script>
-// Abre el modal con el video
+
 function openVideo(videoId, title, lecturer) {
   const modal = document.getElementById("video-modal");
   const iframe = document.getElementById("video-iframe");
   const titleEl = document.getElementById("video-title");
   const lecturerEl = document.getElementById("video-lecturer");
 
-  // Seteamos contenido
   iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
   titleEl.textContent = title;
   lecturerEl.textContent = lecturer;
 
-  // Mostramos el modal
+ 
   modal.style.display = "flex";
 }
 
-// Cierra el modal y detiene el video
+
 function closeVideo() {
   const modal = document.getElementById("video-modal");
   const iframe = document.getElementById("video-iframe");
 
-  // Ocultamos
+  
   modal.style.display = "none";
 
-  // Detenemos el video
+
   iframe.src = "";
 }
 </script>
@@ -1200,12 +1195,12 @@ function createArrowheads(svg) {
 createArrowheads(svg);
 
 
-// Genera un key único para cada par (sin importar el orden)
+
 function pairKey(a, b) {
   return [a, b].sort().join("__");
 }
 
-// Crea una línea base entre dos cards
+
 function createBaseLine(a, b, portFrom = "R", portTo = "L") {
   const from = document.getElementById(a);
   const to   = document.getElementById(b);
@@ -1215,17 +1210,17 @@ function createBaseLine(a, b, portFrom = "R", portTo = "L") {
   const r2 = to.getBoundingClientRect();
   const parent = document.querySelector(".graph-grid").getBoundingClientRect();
 
-  const p1 = getPort(r1, portFrom); // punto de salida
-  const p2 = getPort(r2, portTo);   // punto de llegada
+  const p1 = getPort(r1, portFrom);
+  const p2 = getPort(r2, portTo);   
 
-  // coordenadas relativas al SVG
+
   p1.x -= parent.left; p1.y -= parent.top;
   p2.x -= parent.left; p2.y -= parent.top;
 
-  // determinar dirección inicial del codo según puerto origen
+  
   let mid = { x: p1.x, y: p1.y };
-  // **Añadir margen**
-  const margin = 12; // px, ajusta a tu gusto
+
+  const margin = 12; 
   switch (portFrom) {
     case "L": p1.x -= margin; break;
     case "R": p1.x += margin; break;
@@ -1240,14 +1235,14 @@ function createBaseLine(a, b, portFrom = "R", portTo = "L") {
     case "B": p2.y += margin; break;
   }
   
-  if (portFrom === "L") mid.x = p2.x;         // salir horizontalmente
-  else if (portFrom === "R") mid.x = p2.x;    // salir horizontalmente
-  else if (portFrom === "T") mid.y = p2.y;    // salir vertical
-  else if (portFrom === "B") mid.y = p2.y;    // salir vertical
+  if (portFrom === "L") mid.x = p2.x;
+  else if (portFrom === "R") mid.x = p2.x;
+  else if (portFrom === "T") mid.y = p2.y;
+  else if (portFrom === "B") mid.y = p2.y;
   else if (portFrom === "TL" || portFrom === "TR") mid.y = p2.y;
   else if (portFrom === "BL" || portFrom === "BR") mid.y = p2.y;
 
-  // crear path ortogonal: origen -> codo -> destino
+
   const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
   path.setAttribute(
     "d",
@@ -1263,7 +1258,7 @@ function createBaseLine(a, b, portFrom = "R", portTo = "L") {
 
 
 
-// Dibuja relación entre dos nodes y asigna tipo según dirección
+
 function drawRelation(from, rel) {
   const to = typeof rel === "string" ? rel : rel.id;
   const portFrom = rel.portFrom || "R";
@@ -1284,13 +1279,12 @@ function drawRelation(from, rel) {
 
 
 
-// Aplica el estilo correcto según tipo de flecha
 function applyArrowStyle(line, type) {
   if (!type) return;
   line.classList.add("active", `arrow-${type}`);
 }
 
-// Dibujar todas las relaciones definidas en `relations`
+
 Object.entries(relations).forEach(([from, rel]) => {
   rel.next.forEach(r => drawRelation(from, r));
   rel.requiredPrev.forEach(r => drawRelation(r.id, { ...r, id: from }));
@@ -1319,30 +1313,30 @@ function orientArrow(line, fromSelected) {
   line.removeAttribute("marker-end");
 
   if (fromSelected === "to") {
-    // flecha va hacia la card seleccionada
+ 
     line.setAttribute("marker-start", "url(#arrowhead-start)");
   } else {
-    // flecha sale de la card seleccionada
+   
     line.setAttribute("marker-end", "url(#arrowhead-end)");
   }
 }
 
 
-// Función al hacer click en una card
+
 function nodeClick(card, event) {
   event.stopPropagation();
   const allCards = document.querySelectorAll(".arch-card");
   const id = card.id;
 
-  // 1️⃣ limpiar estados
+
   allCards.forEach(c => {
     c.classList.remove("active","before","after","connected","unrelated");
   });
 
-  // 2️⃣ marcar activa
+
   card.classList.add("active");
 
-  // 3️⃣ colorear según relaciones
+
   if (relations[id]) {
 const { suggestedPrev = [], requiredPrev = [], next = [] } = relations[id];
 
@@ -1367,7 +1361,7 @@ next.forEach(rel => {
 
   }
 
-  // 4️⃣ marcar unrelated
+
   allCards.forEach(c => {
     if (
       c !== card &&
@@ -1377,7 +1371,7 @@ next.forEach(rel => {
     ) c.classList.add("unrelated");
   });
 
-  // 5️⃣ actualizar flechas
+
 const arrows = document.querySelectorAll(".arrow");
 
 arrows.forEach(line => {
@@ -1390,16 +1384,16 @@ arrows.forEach(line => {
   line.removeAttribute("marker-start");
   line.removeAttribute("marker-end");
 
-  // la card seleccionada es A → flecha sale de ella
+
   if (line.dataset.a === id) {
     const other = document.getElementById(line.dataset.b);
     if (other) {
       styleArrowByNode(line, other, "from");
-      // mover al final para que quede encima
+     
       line.parentNode.appendChild(line);
     }
   } 
-  // la card seleccionada es B → flecha va hacia ella
+ 
   else if (line.dataset.b === id) {
     const other = document.getElementById(line.dataset.a);
     if (other) {
@@ -1416,17 +1410,15 @@ arrows.forEach(line => {
 }
 
 
-// Función para resetear todas las cards y flechas
 function resetDiagram() {
   const allCards = document.querySelectorAll(".arch-card");
   const allArrows = document.querySelectorAll(".arrow");
 
-  // Limpiar clases de las cards
   allCards.forEach(c => {
     c.classList.remove("active","before","after","connected","unrelated");
   });
 
-  // Limpiar flechas
+
   allArrows.forEach(line => {
     line.classList.remove("active","arrow-before","arrow-required","arrow-after");
     line.removeAttribute("marker-start");
@@ -1434,9 +1426,9 @@ function resetDiagram() {
   });
 }
 
-// Click en el fondo del grid
+
 document.querySelector(".graph-grid").addEventListener("click", function(e){
-  // Solo si se hace click en el fondo, no en una card
+
   if (e.target === this) {
     resetDiagram();
   }
