@@ -1,8 +1,8 @@
 ---
 layout: splash
 permalink: /
-title: ""          # quita el título
-search: false      # desactiva la barra de búsqueda
+title: ""        
+search: false     
 ---
 
 
@@ -10,9 +10,9 @@ search: false      # desactiva la barra de búsqueda
 <style>
 
 :root {
-  --bg: #042f39; /* page background */
-  --purple: #6c2a68; /* header/panel */
-  --cyan: #17aee0; /* boxes */
+  --bg: #042f39; 
+  --purple: #6c2a68;
+  --cyan: #17aee0;
   --box-stroke: #ffffff;
   --panel-dark: #4b1f45;
   --muted: #cfc8b5;
