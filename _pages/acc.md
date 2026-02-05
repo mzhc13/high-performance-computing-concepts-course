@@ -216,20 +216,23 @@ background: #064756;
 
 
 .arch-card.before {
-  background: #764704;
+  background: #ecddd0;
+  color: #000000;
 }
 
 .arch-card.connected {
-  background: #065107; 
+  background: #d4ecd0;
+  color: #000000;
 }
 
 .arch-card.after {
-  background: #005E80;
+  background: #ecc6e9;
+  color: #000000;
 }
 
 
 .arch-card.unrelated {
-  background: #042F39;
+  background: #005e80;
   color: #ffffff;
   opacity: 1;
   border: 4px solid #ffffff;
@@ -273,12 +276,12 @@ background: #064756;
 }
 
 .arrow-before {
-  stroke: #E3D1AB;                
+  stroke: #ecddd0;                
   stroke-dasharray: 6 6;         
 }
 
 .arrow-required {
-  stroke: #ACE3AB;                
+  stroke: #d4ecd0;                
 }
 
 .arrow-after {
@@ -363,7 +366,7 @@ background: #064756;
 }
 
 .arch-ins p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
   color: #f3eee2;
   text-align: center;
@@ -456,15 +459,15 @@ margin-left:10px;
 
 
 .color-box.before {
-  background: #764704;
+  background: #ecddd0;
 }
 
 .color-box.connected {
-  background: #065107;
+  background: #d4ecd0;
 }
 
 .color-box.after {
-  background: #005E80;
+  background: #ecc6e9;
 }
 
 .arch-ins .card-content p {
@@ -482,15 +485,15 @@ margin-left:10px;
 
 /* colores según tus clases */
 .color-box.before {
-  background: #764704; 
+  background: #ecddd0;
 }
 
 .color-box.connected {
-  background: #065107; 
+  background: #d4ecd0;
 }
 
 .color-box.after {
-  background: #005E80; 
+  background: #ecc6e9;
 }
 
 .page-title-box {
@@ -572,93 +575,27 @@ margin-left:10px;
   transform-origin: top center;
 }
 
-
-
-/* 1) Fix the low-contrast link panel */
-#link.arch-ins {
-  /* keep the purple background */
-  background: var(--pink); /* #6c2a68 */
-  /* ensure the component stands out against the page background */
-  border: 2px solid #ffffff; /* already present, good */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.35); /* subtle extra separation */
+/* Default state – before card is active */
+.btn {
+  background: #ffffff;       /* Same as active – makes it always visible */
+  color: #042f39;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 22px;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  text-align: center;
 }
 
-#link.arch-ins a {
-  /* Use white text on purple to hit 4.5:1 easily */
-  color: #ffffff !important;
-  text-decoration: underline;
-}
-
-/* Also provide a strong focus state */
-#link.arch-ins a:focus-visible {
-  outline: 3px solid #ffe66d;       /* high-contrast focus ring */
-  outline-offset: 3px;
-}
-
-/* 2) Fix the modal close button contrast + focus */
-.video-modal-content {
-  /* keep as-is: background #6c2a68, text white */
-}
-
-.video-modal-content button {
-  color: #ffffff !important;          /* white on purple */
-}
-
-.video-modal-content button:focus-visible {
-  outline: 3px solid #ffe66d;         /* visible keyboard focus */
-  border-radius: 6px;
-}
-
-/* 3) Make arrows clearly visible on dark bg (non-text contrast ≥ 3:1) */
-.arrow {
-  stroke: #a9d6e2;                    /* lighter cyan for 3:1+ on #042f39 */
-  stroke-width: 2.5;
-}
-
-/* Keep the semantic tints for different relationships but start from higher-contrast bases */
-.arrow-before  { stroke: #f0d7a2; }   /* light sand */
-.arrow-required{ stroke: #b9f3b3; }   /* light green */
-.arrow-after   { stroke: #b7e8ee; }   /* light aqua */
-
-/* Ensure arrowheads inherit stroke color correctly */
-#arrows-layer marker polygon { fill: currentColor; }
-
-/* 4) Provide keyboard-visible focus for actionable elements inside cards */
-.arch-card .btn {
-  /* existing active styles are fine; add focus-visible */
-  outline: none;
-}
-
-.arch-card .btn:focus-visible {
+/* Keep your hover */
+.btn:hover,
+.btn:focus-visible {
+  background: #ffffff;
+  color: #000000;
   outline: 3px solid #ffe66d;
   outline-offset: 3px;
-  border-radius: 22px; /* matches your button shape */
 }
-
-/* 5) Fix the hover typo so the style actually applies */
-.card-content:hover {
-  background: #064756;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  filter: brightness(1.1);
-}
-
-/* 6) Ensure buttons are always ≥ 3:1 vs surroundings (component contrast) */
-.arch-card.active .btn {
-  background: #ffffff;   /* strong separation from purple/cyan cards */
-  color: var(--bg);      /* #042f39 — great against white */
-  border: 2px solid #ffffff; /* keeps shape crisp on any card color */
-}
-
-/* For link-looking buttons that might appear on dark tiles elsewhere */
-.arch-card.active .btn:hover,
-.arch-card.active .btn:focus-visible {
-  background: #ffffff;
-  color: #000000; /* OK, also high contrast */
-}
-``
-
-
 
 @media (max-width: 768px) {
 body {
