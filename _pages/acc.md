@@ -545,6 +545,29 @@ margin-left:10px;
 }
 
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 
 
 
@@ -580,6 +603,9 @@ body {
 
 
 <br>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 
 <div class="page-title-box">
   <h1>High-Performance Computing Concepts</h1>
@@ -755,37 +781,34 @@ body {
 </div>
 
 
+
+
+  
 <div
   id="GPU"
   class="arch-card pos-gpu"
->
-<button
-  class="card-toggle"
+  role="button"
+  tabindex="0"
   aria-expanded="false"
   aria-controls="actions-gpu"
-  onclick="nodeClick(this)"
+  onclick="nodeClick(this, event);"
+  onkeydown="if(event.key==='Enter' || event.key===' ') { nodeClick(this, event); }"
 >
-  <h2 class="title">GPU Architecture</h2>
-</button>
-<div class="actions" id="actions-gpu" hidden>
-  <a
-    class="btn"
-    href="#"
-    onclick="openVideo('8axA0RUaxRA?si=kwFcCVbDKzJw3vw4','GPU Architecture','Dr. Christopher Marcotte'); return false;"
-  >
-    Watch lecture
-  </a>
+  <div class="card-content">
+    <h2 class="title">GPU Architecture</h2>
 
-  <a
-    class="btn"
-    href="https://training-academy.dirac.ac.uk/course/section.php?id=60"
-  >
-    Additional material
-  </a>
+    <div class="actions" id="actions-gpu">
+      <a class="btn" href="#"
+        onclick="openVideo('8axA0RUaxRA?si=kwFcCVbDKzJw3vw4','GPU Architecture','Dr. Christopher Marcotte'); event.stopPropagation(); return false;">
+        Watch lecture
+      </a>
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=60">
+        Additional material
+      </a>
+    </div>
+  </div>
 </div>
 
-
- 
 
 
 
