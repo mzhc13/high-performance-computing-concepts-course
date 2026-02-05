@@ -685,7 +685,7 @@ body {
         onclick="openVideo('3ru-v3sAdqw?si=Jj8Koun21HpjFCLY','Von Neumann Architecture','Professor Tobias Weinzierl'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=57">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=57">
         Additional material
       </a>
     </div>
@@ -719,7 +719,7 @@ body {
         onclick="openVideo('ZPXYoJJo8qA?si=ZlX967WyjtxgpLWm','Caches','Professor Tobias Weinzierl'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=66">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=66">
         Additional material
       </a>
     </div>
@@ -747,7 +747,7 @@ body {
         onclick="openVideo('jWFImJ-5Gtg?si=BBZou2CJvwDj7EC-','Machine Architectures (Flynn’s Taxonomy)','Dr. Mladen Ivkovic'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=67">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=67">
         Additional material
       </a>
     </div>
@@ -776,7 +776,7 @@ body {
         onclick="openVideo('8axA0RUaxRA?si=kwFcCVbDKzJw3vw4','GPU Architecture','Dr. Christopher Marcotte'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=60">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=60">
         Additional material
       </a>
     </div>
@@ -806,7 +806,7 @@ body {
         onclick="openVideo('i-88l2K9824?si=5hG4_gn3DE3_r6Tq','MPI','Dr. Christopher Marcotte'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=61">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=61">
         Additional material
       </a>
     </div>
@@ -835,7 +835,7 @@ body {
         onclick="openVideo('7Z3JrE8SBgU?si=QB-EK98D3_63IAiq','Vectorisation','Dr. Thomas Flynn'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=62">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=62">
         Additional material
       </a>
     </div>
@@ -864,7 +864,7 @@ body {
         onclick="openVideo('iwb17_aCSRA?si=NGorUytvUqWRMWEZ','Shared-Memory Parallel Paradigms','Dr. Mladen Ivkovic'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=93">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=93">
         Additional material
       </a>
     </div>
@@ -897,7 +897,7 @@ body {
         onclick="openVideo('uhYFZrqe9VY?si=TbG28ic8nFSU0kAm','Roofline','Professor Tobias Weinzierl'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=63">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=63">
         Additional material
       </a>
     </div>
@@ -927,7 +927,7 @@ body {
         onclick="openVideo('99VgSkjLQM4?si=YqCN8fMLu2iB4Tt6','Strong Scaling','Dr. Christopher Marcotte'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=65">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=65">
         Additional material
       </a>
     </div>
@@ -957,7 +957,7 @@ body {
         onclick="openVideo('dVZqpXi5BRE?si=pNSgIwWY38rt4W12','Weak Scaling','Dr. Christopher Marcotte'); event.stopPropagation(); return false;">
         Watch lecture
       </a>
-      <a class="btn secondary" href="https://training-academy.dirac.ac.uk/course/section.php?id=64">
+      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=64">
         Additional material
       </a>
     </div>
