@@ -206,18 +206,7 @@ background: #064756;
   opacity: 1;
 }
 
-.arch-card.unrelated {
-  background: #042F39;     
-  color: #064756;           
-  opacity: 1;
-  border: 4px solid #064756;
-}
 
-
-
-.arch-card.unrelated .title {
-  color: #064756;
-}
 
 
 
@@ -244,13 +233,13 @@ background: #064756;
 
 .arch-card.unrelated {
   background: #042F39;
-  color: #064756;
+  color: #ffffff;
   opacity: 1;
-  border: 4px solid #064756;
+  border: 4px solid #ffffff;
 }
 
 .arch-card.unrelated .title {
-  color: #064756;
+  color: #ffffff;
 }
 
 
