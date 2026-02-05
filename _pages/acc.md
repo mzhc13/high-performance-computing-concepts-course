@@ -1,6 +1,6 @@
 ---
 layout: splash
-permalink: /acc/
+permalink: /
 title: ""          # quita el título
 search: false      # desactiva la barra de búsqueda
 ---
@@ -216,17 +216,17 @@ background: #064756;
 
 
 .arch-card.before {
-  background: #ecddd0;
+  background: #c4b2a1;
   color: #000000;
 }
 
 .arch-card.connected {
-  background: #d4ecd0;
+  background: #7f9a79;
   color: #000000;
 }
 
 .arch-card.after {
-  background: #ecc6e9;
+  background: #a696a5;
   color: #000000;
 }
 
@@ -276,12 +276,12 @@ background: #064756;
 }
 
 .arrow-before {
-  stroke: #ecddd0;                
+  stroke: #c4b2a1;                
   stroke-dasharray: 6 6;         
 }
 
 .arrow-required {
-  stroke: #d4ecd0;                
+  stroke: #7f9a79;                
 }
 
 .arrow-after {
@@ -395,13 +395,13 @@ background: #064756;
 }
 
 .legend-item h1{
-  font-size: 14px !important;
+  font-size: 20px !important;
   margin-left:30px !important;
   margin-top: 15px!important;
 }
 
 .legend h1{
-font-size:15px;
+font-size:20px;
 margin-left:10px;
  font-weight: 500;
   color: #ffffff;
@@ -458,17 +458,6 @@ margin-left:10px;
 }
 
 
-.color-box.before {
-  background: #ecddd0;
-}
-
-.color-box.connected {
-  background: #d4ecd0;
-}
-
-.color-box.after {
-  background: #ecc6e9;
-}
 
 .arch-ins .card-content p {
   color: #FFF8DC;
@@ -478,22 +467,22 @@ margin-left:10px;
   width: 50px;
   height: 50px;
   border-radius: 8px;
-  border: 2px solid var(--box-stroke);
+  border: 4px solid var(--box-stroke);
   margin: 0;
 }
 
 
 /* colores según tus clases */
 .color-box.before {
-  background: #ecddd0;
+  background: #c4b2a1;
 }
 
 .color-box.connected {
-  background: #d4ecd0;
+  background: #7f9a79;
 }
 
 .color-box.after {
-  background: #ecc6e9;
+  background: #a696a5;
 }
 
 .page-title-box {
