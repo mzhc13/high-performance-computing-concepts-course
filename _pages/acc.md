@@ -167,9 +167,6 @@ background: #064756;
 .arch-card.active .btn:hover {
   background: #ffffff;    
   color: #000000; 
-  transform: translateY(-2px);  
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
-  filter: brightness(1.1);  
 }
 
 
