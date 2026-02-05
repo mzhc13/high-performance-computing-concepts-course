@@ -313,7 +313,7 @@ background: #064756;
 }
 
 .video-modal-content {
-  background: #CBA8B1;
+  background: #6c2a68;
   border-radius: 16px;
   padding: 24px;
   width: 90%;
@@ -326,13 +326,13 @@ background: #064756;
   margin: 0 0 4px 0;
   font-size: 50px;
   text-align: center;
-   color: #042f39;
+   color: #ffffff;
 }
 
 .video-modal p {
   margin: 0 0 16px 0;
   opacity: 0.85;
-    color: #042f39;
+    color: #ffffff;
 }
 
 .video-wrapper {
