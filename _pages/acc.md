@@ -165,7 +165,7 @@ background: #064756;
 }
 
 .arch-card.active .btn:hover {
-  background: #E5F6FB;    
+  background: #ffffff;    
   color: #000000; 
   transform: translateY(-2px);  
   box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
@@ -755,34 +755,37 @@ body {
 </div>
 
 
-
-
-  
 <div
   id="GPU"
   class="arch-card pos-gpu"
-  role="button"
-  tabindex="0"
+>
+<button
+  class="card-toggle"
   aria-expanded="false"
   aria-controls="actions-gpu"
-  onclick="nodeClick(this, event);"
-  onkeydown="if(event.key==='Enter' || event.key===' ') { nodeClick(this, event); }"
+  onclick="nodeClick(this)"
 >
-  <div class="card-content">
-    <h2 class="title">GPU Architecture</h2>
+  <h2 class="title">GPU Architecture</h2>
+</button>
+<div class="actions" id="actions-gpu" hidden>
+  <a
+    class="btn"
+    href="#"
+    onclick="openVideo('8axA0RUaxRA?si=kwFcCVbDKzJw3vw4','GPU Architecture','Dr. Christopher Marcotte'); return false;"
+  >
+    Watch lecture
+  </a>
 
-    <div class="actions" id="actions-gpu">
-      <a class="btn" href="#"
-        onclick="openVideo('8axA0RUaxRA?si=kwFcCVbDKzJw3vw4','GPU Architecture','Dr. Christopher Marcotte'); event.stopPropagation(); return false;">
-        Watch lecture
-      </a>
-      <a class="btn" href="https://training-academy.dirac.ac.uk/course/section.php?id=60">
-        Additional material
-      </a>
-    </div>
-  </div>
+  <a
+    class="btn"
+    href="https://training-academy.dirac.ac.uk/course/section.php?id=60"
+  >
+    Additional material
+  </a>
 </div>
 
+
+ 
 
 
 
